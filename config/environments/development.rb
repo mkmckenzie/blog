@@ -36,6 +36,10 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  #needed for devise
+  #In production, :host should e set to actual host of your application 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000}
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
